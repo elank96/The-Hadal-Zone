@@ -33,4 +33,10 @@ public class EnemyPathfindingState : EnemyBaseState
             stateMachine.PathFollower.enabled = false;
         }
     }
+
+    public override void PhysicsTick(float fixedDeltaTime)
+    {
+    }
+
+    
 }

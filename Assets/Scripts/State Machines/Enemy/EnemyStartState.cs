@@ -31,6 +31,8 @@ public class EnemyStartState : EnemyBaseState
     private void HandleUseToolEvent()
     {
     }
-
-
+    
+    public override void PhysicsTick(float fixedDeltaTime)
+    {
+    }
 }

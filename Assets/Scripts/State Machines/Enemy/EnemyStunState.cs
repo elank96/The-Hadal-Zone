@@ -47,4 +47,8 @@ public class EnemyStunState : EnemyBaseState
             stateMachine.SwitchState(new EnemyPathfindingState(stateMachine));
         }
     }
+
+    public override void PhysicsTick(float fixedDeltaTime)
+    {
+    }
 }

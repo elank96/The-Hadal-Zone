@@ -40,4 +40,8 @@ public class EnemyAttackState : EnemyBaseState
     public override void Exit()
     {
     }
+
+    public override void PhysicsTick(float fixedDeltaTime)
+    {
+    }
 }
