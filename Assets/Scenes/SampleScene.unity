@@ -235,7 +235,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 532458919}
   - component: {fileID: 532458923}
   m_Layer: 0
-  m_Name: Anchor
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -670,8 +670,9 @@ GameObject:
   - component: {fileID: 669263912}
   - component: {fileID: 669263917}
   - component: {fileID: 669263916}
+  - component: {fileID: 669263918}
   m_Layer: 0
-  m_Name: Follower
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,6 +816,28 @@ MonoBehaviour:
   moveSpeed: 10
   waypointTolerance: 0.1
   repathInterval: 0.5
+--- !u!114 &669263918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669263911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c9eb21138f80040ae6e55fa2152ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStateMachine
+  <InputReader>k__BackingField: {fileID: 0}
+  <Rigidbody>k__BackingField: {fileID: 0}
+  <Target>k__BackingField: {fileID: 532458922}
+  <PathFollower>k__BackingField: {fileID: 669263917}
+  <AttackRange>k__BackingField: 2
+  <AttackCooldown>k__BackingField: 1
+  <StunDuration>k__BackingField: 2
+  onAttack:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
