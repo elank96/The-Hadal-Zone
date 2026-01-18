@@ -118,6 +118,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InputPos"",
+                    ""type"": ""Value"",
+                    ""id"": ""f49714f0-0c88-477f-8d06-005618f6b44b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -135,7 +144,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""WASD"",
                     ""id"": ""00ca640b-d935-4593-8157-c05846ea39b3"",
-                    ""path"": ""Dpad"",
+                    ""path"": ""Dpad(mode=1)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -272,6 +281,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SwitchTool"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cba85bc6-dffa-451f-8910-2ef40a2c593e"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InputPos"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -862,6 +882,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_UseTool = m_Player.FindAction("UseTool", throwIfNotFound: true);
         m_Player_SwitchTool = m_Player.FindAction("SwitchTool", throwIfNotFound: true);
+        m_Player_InputPos = m_Player.FindAction("InputPos", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -958,6 +979,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_UseTool;
     private readonly InputAction m_Player_SwitchTool;
+    private readonly InputAction m_Player_InputPos;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -981,6 +1003,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/SwitchTool".
         /// </summary>
         public InputAction @SwitchTool => m_Wrapper.m_Player_SwitchTool;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/InputPos".
+        /// </summary>
+        public InputAction @InputPos => m_Wrapper.m_Player_InputPos;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1016,6 +1042,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @SwitchTool.started += instance.OnSwitchTool;
             @SwitchTool.performed += instance.OnSwitchTool;
             @SwitchTool.canceled += instance.OnSwitchTool;
+            @InputPos.started += instance.OnInputPos;
+            @InputPos.performed += instance.OnInputPos;
+            @InputPos.canceled += instance.OnInputPos;
         }
 
         /// <summary>
@@ -1036,6 +1065,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @SwitchTool.started -= instance.OnSwitchTool;
             @SwitchTool.performed -= instance.OnSwitchTool;
             @SwitchTool.canceled -= instance.OnSwitchTool;
+            @InputPos.started -= instance.OnInputPos;
+            @InputPos.performed -= instance.OnInputPos;
+            @InputPos.canceled -= instance.OnInputPos;
         }
 
         /// <summary>
@@ -1357,6 +1389,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchTool(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "InputPos" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInputPos(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
