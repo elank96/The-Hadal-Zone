@@ -22,5 +22,10 @@ public class StateMachine : MonoBehaviour
     {
         currentState?.Tick(Time.deltaTime); // Null conditional operator '?'
     }
+
+    void FixedUpdate()
+    {
+        currentState?.PhysicsTick(Time.fixedDeltaTime);
+    }
     
 }
