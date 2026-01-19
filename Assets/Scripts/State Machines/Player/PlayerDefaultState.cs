@@ -18,7 +18,7 @@ public class PlayerDefaultState : PlayerBaseState
     public override void Enter()
     {
         stateMachine.InputReader.SwitchToolEvent += HandleSwitchToolEvent;
-        Cursor.visible = false;
+        Cursor.SetCursor(stateMachine.DefaultCursor, stateMachine.CursorHotspot, CursorMode.Auto);
     }
 
     public override void Tick(float deltaTime)

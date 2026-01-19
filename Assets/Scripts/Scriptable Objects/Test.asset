@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a91e4342fc037147a588a32ae698260, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::ScannableData
-  objectName: 
-  description: 
-  isEndangered: 0
+  objectName: Test
+  description: This is a Test!
+  isEndangered: 1

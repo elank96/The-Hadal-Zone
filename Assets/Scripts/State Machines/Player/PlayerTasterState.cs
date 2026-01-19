@@ -14,14 +14,12 @@ public class PlayerTaserState : PlayerDefaultState
         base.Enter();
         stateMachine.InputReader.UseToolEvent += HandleUseToolEvent;
         Cursor.SetCursor(stateMachine.TaserCursor, stateMachine.CursorHotspot, CursorMode.Auto);
-        Cursor.visible = true;
     }
 
     public override void Exit()
     {
         base.Exit();
         stateMachine.InputReader.UseToolEvent -= HandleUseToolEvent;
-        Cursor.visible = false;
     }
 
     protected override void HandleSwitchToolEvent()

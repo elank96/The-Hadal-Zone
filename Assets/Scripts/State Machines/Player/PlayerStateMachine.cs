@@ -10,6 +10,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public float RotateSpeed { get; private set; }
     [field: SerializeField] public float RotateDeadZone { get; private set; }
     [field: SerializeField] public float PropellerSpinSpeed { get; private set; }
+    [field: SerializeField] public Texture2D DefaultCursor { get; private set; }
     [field: SerializeField] public Texture2D ScannerCursor { get; private set; }
     [field: SerializeField] public Texture2D TaserCursor { get; private set; }
     [field: SerializeField] public Vector2 CursorHotspot { get; private set; } = new Vector2(16, 16);
@@ -19,7 +20,6 @@ public class PlayerStateMachine : StateMachine
     private void Start()
     {
         MainCamera = Camera.main;
-        Cursor.visible = false;
         SwitchState(new PlayerDefaultState(this));
     }
 }

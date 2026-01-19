@@ -41,25 +41,65 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.IOSResolver.dll" />
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.VersionHandlerImpl.dll" />
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.JarResolver.dll" />
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\Google.VersionHandler.dll" />
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.PackageManagerResolver.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ScanPopupUI.cs" />
+    <Compile Include="Assets\UnityStuff\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerStateMachine.cs" />
+    <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyStunState.cs" />
     <Compile Include="Assets\Scripts\Scannable.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerBaseState.cs" />
+    <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyStateMachine.cs" />
+    <Compile Include="Assets\Scripts\A-Star\AStarGrid.cs" />
+    <Compile Include="Assets\Scripts\A-Star\PathFollower.cs" />
+    <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyAttackState.cs" />
     <Compile Include="Assets\Scripts\State Machines\StateMachine.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerTasterState.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\ScannableData.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyStartState.cs" />
+    <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyPathfindingState.cs" />
+    <Compile Include="Assets\Scripts\A-Star\AStarPathfinder.cs" />
     <Compile Include="Assets\Scripts\State Machines\State.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerScannerState.cs" />
     <Compile Include="Assets\Scripts\InputReader.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerDefaultState.cs" />
     <Compile Include="Assets\Controls.cs" />
+    <None Include="Assets\UnityStuff\Resources\BillingMode.json" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\Resources\BillingMode.json" />
-    <None Include="Assets\Free Stylized Skybox\ReadMe.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\UnityStuff\Free Stylized Skybox\ReadMe.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

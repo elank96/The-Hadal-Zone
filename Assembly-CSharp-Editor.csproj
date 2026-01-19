@@ -41,13 +41,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.IOSResolver.dll" />
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.VersionHandlerImpl.dll" />
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.JarResolver.dll" />
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\Google.VersionHandler.dll" />
+    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.PackageManagerResolver.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
-    <None Include="Assets\MobileDependencyResolver\Editor\mobile-dependency-resolver_version-1.2.185_manifest.txt" />
+    <Compile Include="Assets\UnityStuff\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <None Include="Assets\UnityStuff\MobileDependencyResolver\Editor\mobile-dependency-resolver_version-1.2.185_manifest.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -469,10 +474,10 @@
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.visualscripting@191c0d7e3b69\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandler">
-      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\MobileDependencyResolver\Editor\Google.VersionHandler.dll</HintPath>
+      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver">
-      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\MobileDependencyResolver\Editor\1.2.185\Google.IOSResolver.dll</HintPath>
+      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.IOSResolver.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.collections@aea9d3bd5e19\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
@@ -487,13 +492,13 @@
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.analytics@c9d14a6bdec6\Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl">
-      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\MobileDependencyResolver\Editor\1.2.185\Google.VersionHandlerImpl.dll</HintPath>
+      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Lib\Editor\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Google.JarResolver">
-      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\MobileDependencyResolver\Editor\1.2.185\Google.JarResolver.dll</HintPath>
+      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.JarResolver.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.collab-proxy@1ec4e416a4af\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
@@ -529,7 +534,7 @@
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.analytics@c9d14a6bdec6\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver">
-      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\MobileDependencyResolver\Editor\1.2.185\Google.PackageManagerResolver.dll</HintPath>
+      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.PackageManagerResolver.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>

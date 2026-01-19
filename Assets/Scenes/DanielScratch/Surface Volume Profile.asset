@@ -46,7 +46,7 @@ MonoBehaviour:
     m_Value: {x: 0.7753141, y: 0.79887867, z: 1, w: 0}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 0.46964604, y: 0.539018, z: 1, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
   gain:
     m_OverrideState: 1
     m_Value: {x: 0.7677616, y: 0.8334654, z: 1, w: 0}
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 4
   aperture:
     m_OverrideState: 1
     m_Value: 5.2

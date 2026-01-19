@@ -14,15 +14,12 @@ public class PlayerScannerState : PlayerDefaultState
         base.Enter();
         stateMachine.InputReader.UseToolEvent += HandleUseToolEvent;
         Cursor.SetCursor(stateMachine.ScannerCursor, stateMachine.CursorHotspot, CursorMode.Auto);
-        Cursor.visible = true;
-        
     }
 
     public override void Exit()
     {
         base.Exit();
         stateMachine.InputReader.UseToolEvent -= HandleUseToolEvent;
-        Cursor.visible = false;
     }
 
     protected override void HandleSwitchToolEvent()
@@ -40,6 +37,23 @@ public class PlayerScannerState : PlayerDefaultState
             if (hit.collider.TryGetComponent<Scannable>(out Scannable target))
             {
                 target.DisplayData();
+                
+                /*
+            if (hit.collider.TryGetComponent<Scannable>(out Scannable target))
+            {
+                // 1. Create the UI element under the Canvas
+                GameObject popupObj = UnityEngine.Object.Instantiate(
+                    stateMachine.ScanPopupPrefab,
+                    stateMachine.CanvasTransform
+                );
+
+                // 2. Pass the data and the target transform
+                if (popupObj.TryGetComponent<ScanPopupUI>(out var popupUI))
+                {
+                    popupUI.Setup(target.ScanObject(), target.transform);
+                }
+            }
+            */
             }
         }
     }
