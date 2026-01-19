@@ -11,9 +11,9 @@ public class EnemyStunState : EnemyBaseState
 
     public override void Enter()
     {
-        if (stateMachine.PathFollower != null)
+        if (stateMachine.AIPath != null)
         {
-            stateMachine.PathFollower.enabled = false;
+            stateMachine.AIPath.enabled = false;
         }
     }
 

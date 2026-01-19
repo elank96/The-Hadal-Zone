@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
+using Pathfinding;
 
 public class EnemyStateMachine : StateMachine
 {
-    [field: SerializeField] public InputReader InputReader { get; private set; }        // field: allows us to serialize a property, property is configured such that anyone can get it but you cant set it
     [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
     [field: SerializeField] public Transform Target { get; private set; }
-    [field: SerializeField] public PathFollower PathFollower { get; private set; }
+    [field: SerializeField] public AIPath AIPath { get; private set; }
+    [field: SerializeField] public AIDestinationSetter DestinationSetter { get; private set; }
     [field: SerializeField] public float AttackRange { get; private set; } = 2f;
     [field: SerializeField] public float AttackCooldown { get; private set; } = 1f;
     [field: SerializeField] public float StunDuration { get; private set; } = 2f;
@@ -16,9 +17,14 @@ public class EnemyStateMachine : StateMachine
 
     private void Awake()
     {
-        if (PathFollower == null)
+        if (AIPath == null)
         {
-            PathFollower = GetComponent<PathFollower>();
+            AIPath = GetComponent<AIPath>();
+        }
+
+        if (DestinationSetter == null)
+        {
+            DestinationSetter = GetComponent<AIDestinationSetter>();
         }
     }
 

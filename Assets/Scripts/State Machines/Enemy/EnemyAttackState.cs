@@ -9,9 +9,9 @@ public class EnemyAttackState : EnemyBaseState
     public override void Enter()
     {
         attackTimer = 0f;
-        if (stateMachine.PathFollower != null)
+        if (stateMachine.AIPath != null)
         {
-            stateMachine.PathFollower.enabled = false;
+            stateMachine.AIPath.enabled = false;
         }
     }
 
