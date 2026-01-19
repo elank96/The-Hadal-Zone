@@ -51,7 +51,6 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ScanPopupUI.cs" />
     <Compile Include="Assets\UnityStuff\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerStateMachine.cs" />
@@ -66,12 +65,14 @@
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerTasterState.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\ScannableData.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyStartState.cs" />
+    <Compile Include="Assets\Scripts\ScannableUIBridge.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyPathfindingState.cs" />
     <Compile Include="Assets\Scripts\A-Star\AStarPathfinder.cs" />
     <Compile Include="Assets\Scripts\State Machines\State.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerScannerState.cs" />
     <Compile Include="Assets\Scripts\InputReader.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerDefaultState.cs" />
+    <Compile Include="Assets\Scripts\WorldSpaceUIAnchor.cs" />
     <Compile Include="Assets\Controls.cs" />
     <None Include="Assets\UnityStuff\Resources\BillingMode.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

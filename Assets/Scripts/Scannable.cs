@@ -3,6 +3,7 @@ using UnityEngine;
 public class Scannable : MonoBehaviour
 {
     [SerializeField] private ScannableData data;
+    [field: SerializeField] public WorldSpaceUIAnchor WorldSpaceUIAnchor { get; private set; }
 
     public ScannableData ScanObject()
     {
@@ -11,9 +12,7 @@ public class Scannable : MonoBehaviour
 
     public void DisplayData()
     {
-        Debug.Log(data.objectName);
-        Debug.Log(data.description);
-        Debug.Log(data.isEndangered);
+        WorldSpaceUIAnchor.CreateUI(data);
     }
 
 }
