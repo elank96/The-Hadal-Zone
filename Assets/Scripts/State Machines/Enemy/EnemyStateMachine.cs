@@ -3,13 +3,13 @@ using UnityEngine.Events;
 
 public class EnemyStateMachine : StateMachine
 {
-    [field: SerializeField] public InputReader InputReader { get; private set; }        // field: allows us to serialize a property, property is configured such that anyone can get it but you cant set it
     [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
     [field: SerializeField] public Transform Target { get; private set; }
     [field: SerializeField] public PathFollower PathFollower { get; private set; }
     [field: SerializeField] public float AttackRange { get; private set; } = 2f;
     [field: SerializeField] public float AttackCooldown { get; private set; } = 1f;
     [field: SerializeField] public float StunDuration { get; private set; } = 2f;
+    [field: SerializeField] public ParticleSystem StunParticles { get; private set; }
 
     [Header("Events")]
     [SerializeField] private UnityEvent onAttack;

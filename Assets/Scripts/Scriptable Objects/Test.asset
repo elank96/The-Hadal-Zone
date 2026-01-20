@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScannableData
   objectName: Test
   description: This is a Test!
-  isEndangered: 1
+  isEndangered: 0

@@ -15,19 +15,18 @@ public class EnemyStunState : EnemyBaseState
         {
             stateMachine.PathFollower.enabled = false;
         }
+        
+        stateMachine.StunParticles.Play();
+        
     }
 
     public override void Tick(float deltaTime)
     {
-        if (remainingTime <= 0f)
-        {
-            ExitStun();
-            return;
-        }
-
         remainingTime -= deltaTime;
+        
         if (remainingTime <= 0f)
         {
+            stateMachine.StunParticles.Stop();
             ExitStun();
         }
     }

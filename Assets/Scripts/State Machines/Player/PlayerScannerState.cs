@@ -37,23 +37,6 @@ public class PlayerScannerState : PlayerDefaultState
             if (hit.collider.TryGetComponent<Scannable>(out Scannable target))
             {
                 target.DisplayData();
-                
-                /*
-            if (hit.collider.TryGetComponent<Scannable>(out Scannable target))
-            {
-                // 1. Create the UI element under the Canvas
-                GameObject popupObj = UnityEngine.Object.Instantiate(
-                    stateMachine.ScanPopupPrefab,
-                    stateMachine.CanvasTransform
-                );
-
-                // 2. Pass the data and the target transform
-                if (popupObj.TryGetComponent<ScanPopupUI>(out var popupUI))
-                {
-                    popupUI.Setup(target.ScanObject(), target.transform);
-                }
-            }
-            */
             }
         }
     }

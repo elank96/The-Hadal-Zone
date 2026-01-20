@@ -17,7 +17,7 @@ public class WorldSpaceUIAnchor : MonoBehaviour
         {
             spawnedUI = Instantiate(uiPrefab, transform.position, Quaternion.identity);
             spawnedUI.transform.SetParent(this.transform);
-            spawnedUI.transform.localPosition = new Vector3(0, canvasOffset, 0); // Offset above object
+            spawnedUI.transform.localPosition = new Vector3(0, canvasOffset, -canvasOffset); // Offset above object
             spawnedUI.transform.localScale = new Vector3(canvasSize, canvasSize, canvasSize);
 
             var bridge = spawnedUI.GetComponent<ScannableUIBridge>();
