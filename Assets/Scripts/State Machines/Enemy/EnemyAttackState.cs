@@ -22,7 +22,7 @@ public class EnemyAttackState : EnemyBaseState
             return;
         }
 
-        if (stateMachine.DistanceToTarget2D() > stateMachine.AttackRange)
+        if (!stateMachine.HasLineOfSight() || stateMachine.DistanceToTarget2D() > stateMachine.AttackRange)
         {
             stateMachine.SwitchState(new EnemyPathfindingState(stateMachine));
             return;

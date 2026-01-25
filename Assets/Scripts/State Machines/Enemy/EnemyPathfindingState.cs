@@ -24,7 +24,7 @@ public class EnemyPathfindingState : EnemyBaseState
             return;
         }
 
-        if (stateMachine.DistanceToTarget2D() <= stateMachine.AttackRange)
+        if (stateMachine.DistanceToTarget2D() <= stateMachine.AttackRange && stateMachine.HasLineOfSight())
         {
             stateMachine.SwitchState(new EnemyAttackState(stateMachine));
         }

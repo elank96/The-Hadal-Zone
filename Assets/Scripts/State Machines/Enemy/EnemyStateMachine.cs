@@ -11,6 +11,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public float AttackRange { get; private set; } = 2f;
     [field: SerializeField] public float AttackCooldown { get; private set; } = 1f;
     [field: SerializeField] public float StunDuration { get; private set; } = 2f;
+    [SerializeField] private LayerMask obstacleMask;
 
     [Header("Events")]
     [SerializeField] private UnityEvent onAttack;
@@ -52,5 +53,27 @@ public class EnemyStateMachine : StateMachine
 
         Vector3 delta = Target.position - transform.position;
         return new Vector2(delta.x, delta.y).magnitude;
+    }
+
+    public bool HasLineOfSight()
+    {
+        if (Target == null)
+        {
+            return false;
+        }
+
+        Vector3 start = transform.position;
+        Vector3 end = Target.position;
+        start.z = transform.position.z;
+        end.z = transform.position.z;
+
+        if (obstacleMask == 0)
+        {
+            return true;
+        }
+
+        bool blocked = Physics.Linecast(start, end, obstacleMask, QueryTriggerInteraction.Ignore);
+        Debug.DrawLine(start, end, blocked ? Color.red : Color.green, 0f, false);
+        return !blocked;
     }
 }
