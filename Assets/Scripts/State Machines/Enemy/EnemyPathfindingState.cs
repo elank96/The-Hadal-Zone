@@ -6,10 +6,14 @@ public class EnemyPathfindingState : EnemyBaseState
 
     public override void Enter()
     {
-        if (stateMachine.PathFollower != null && stateMachine.Target != null)
+        if (stateMachine.AIPath != null)
         {
-            stateMachine.PathFollower.enabled = true;
-            stateMachine.PathFollower.SetTarget(stateMachine.Target);
+            stateMachine.AIPath.enabled = true;
+        }
+
+        if (stateMachine.DestinationSetter != null && stateMachine.Target != null)
+        {
+            stateMachine.DestinationSetter.target = stateMachine.Target;
         }
     }
 
@@ -20,7 +24,7 @@ public class EnemyPathfindingState : EnemyBaseState
             return;
         }
 
-        if (stateMachine.DistanceToTarget2D() <= stateMachine.AttackRange)
+        if (stateMachine.DistanceToTarget2D() <= stateMachine.AttackRange && stateMachine.HasLineOfSight())
         {
             stateMachine.SwitchState(new EnemyAttackState(stateMachine));
         }
@@ -28,9 +32,9 @@ public class EnemyPathfindingState : EnemyBaseState
 
     public override void Exit()
     {
-        if (stateMachine.PathFollower != null)
+        if (stateMachine.AIPath != null)
         {
-            stateMachine.PathFollower.enabled = false;
+            stateMachine.AIPath.enabled = false;
         }
     }
 

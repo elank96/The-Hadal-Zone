@@ -9,9 +9,9 @@ public class EnemyAttackState : EnemyBaseState
     public override void Enter()
     {
         attackTimer = 0f;
-        if (stateMachine.PathFollower != null)
+        if (stateMachine.AIPath != null)
         {
-            stateMachine.PathFollower.enabled = false;
+            stateMachine.AIPath.enabled = false;
         }
     }
 
@@ -22,7 +22,7 @@ public class EnemyAttackState : EnemyBaseState
             return;
         }
 
-        if (stateMachine.DistanceToTarget2D() > stateMachine.AttackRange)
+        if (!stateMachine.HasLineOfSight() || stateMachine.DistanceToTarget2D() > stateMachine.AttackRange)
         {
             stateMachine.SwitchState(new EnemyPathfindingState(stateMachine));
             return;
