@@ -13,7 +13,15 @@ public class Scannable : MonoBehaviour
     public void DisplayData()
     {
         hasBeenScanned = true;
-        WorldSpaceUIAnchor.CreateUI(data);
+        WorldSpaceUIAnchor.CreateScanUI(data);
+    }
+
+    public void DisplayScanUIElement()
+    {
+        if (hasBeenScanned == false)
+        {
+            WorldSpaceUIAnchor.CreateScannableUI();
+        }
     }
 
 }

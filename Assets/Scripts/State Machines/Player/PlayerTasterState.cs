@@ -55,7 +55,6 @@ public class PlayerTaserState : PlayerDefaultState
 
         foreach (var hit in hitColliders)
         {
-            // Assuming your fish have a "FishController" or "Stunnable" script
             if (hit.TryGetComponent<Stunnable>(out var target))
             {
                 target.Stun();

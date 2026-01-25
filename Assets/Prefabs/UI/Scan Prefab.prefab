@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 3298619430681355579}
   - component: {fileID: 3482826340298552451}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Scan Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3298619430681355579
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PlayerScannerState : PlayerDefaultState
 {
+    
+    float scanCooldown = 0f;
+    
     public PlayerScannerState(PlayerStateMachine stateMachine)
         : base(stateMachine) { }
     
@@ -14,6 +17,26 @@ public class PlayerScannerState : PlayerDefaultState
         base.Enter();
         stateMachine.InputReader.UseToolEvent += HandleUseToolEvent;
         Cursor.SetCursor(stateMachine.ScannerCursor, stateMachine.CursorHotspot, CursorMode.Auto);
+    }
+
+    public override void Tick(float deltaTime)
+    {
+        base.Tick(deltaTime);
+        scanCooldown -= deltaTime;
+        if (scanCooldown < 0f)
+        {
+            scanCooldown = 1f;
+            float scanRadius = 15f;
+            Collider[] hitColliders = Physics.OverlapSphere(stateMachine.transform.position, scanRadius);
+
+            foreach (var hit in hitColliders)
+            {
+                if (hit.TryGetComponent<Scannable>(out var target))
+                {
+                    target.DisplayScanUIElement();
+                }
+            }
+        }
     }
 
     public override void Exit()
