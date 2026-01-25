@@ -10,6 +10,11 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public AIDestinationSetter DestinationSetter { get; private set; }
     [field: SerializeField] public float AttackRange { get; private set; } = 2f;
     [field: SerializeField] public float AttackCooldown { get; private set; } = 1f;
+    [field: SerializeField] public float AttackLockDuration { get; private set; } = 0.5f;
+    [field: SerializeField] public float AttackHoldDuration { get; private set; } = 0.5f;
+    [field: SerializeField] public float AttackLungeDuration { get; private set; } = 0.2f;
+    [field: SerializeField] public float AttackLungeSpeed { get; private set; } = 8f;
+    [field: SerializeField] public float AttackDamage { get; private set; } = 10f;
     [field: SerializeField] public float StunDuration { get; private set; } = 2f;
     [field: SerializeField] public ParticleSystem StunParticles { get; private set; }
     [SerializeField] private LayerMask obstacleMask;
@@ -19,6 +24,11 @@ public class EnemyStateMachine : StateMachine
 
     private void Awake()
     {
+        if (Rigidbody == null)
+        {
+            Rigidbody = GetComponent<Rigidbody>();
+        }
+
         if (AIPath == null)
         {
             AIPath = GetComponent<AIPath>();
@@ -43,6 +53,23 @@ public class EnemyStateMachine : StateMachine
     public void ApplyStun()
     {
         SwitchState(new EnemyStunState(this, StunDuration));
+    }
+
+    public bool TryApplyDamageToTarget(float damage)
+    {
+        if (Target == null)
+        {
+            return false;
+        }
+
+        Damageable damageable = Target.GetComponent<Damageable>();
+        if (damageable == null)
+        {
+            return false;
+        }
+
+        damageable.ApplyDamage(damage);
+        return true;
     }
 
     public float DistanceToTarget2D()
