@@ -23,12 +23,26 @@ public class PlayerDefaultState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
-        
         //Rotate Propellers
-        float horizontallInput = stateMachine.InputReader.MovementValue.x;
-        float rotationAmount = horizontallInput * stateMachine.PropellerSpinSpeed * deltaTime;
-        stateMachine.ForwardPropL.Rotate(0, 0, rotationAmount, Space.Self);
-        stateMachine.ForwardPropR.Rotate(0, 0, rotationAmount, Space.Self);
+        float horizontalInput = stateMachine.InputReader.MovementValue.x;
+        float verticalInput = stateMachine.InputReader.MovementValue.y;
+        float hRotationAmount = horizontalInput * stateMachine.PropellerSpinSpeed * deltaTime;
+        float vRotationAmount = verticalInput * stateMachine.PropellerSpinSpeed * deltaTime;
+        stateMachine.ForwardPropL.Rotate(0, 0, hRotationAmount, Space.Self);
+        stateMachine.ForwardPropR.Rotate(0, 0, hRotationAmount, Space.Self);
+        stateMachine.UpPropL.Rotate(0, 0, vRotationAmount, Space.Self);
+        stateMachine.UpPropR.Rotate(0, 0, vRotationAmount, Space.Self);
+        
+        //Particles
+        var emissionFL = stateMachine.ForwardParticlesL.emission;
+        var emissionFR = stateMachine.ForwardParticlesR.emission;
+        var emissionUL = stateMachine.UpParticlesL.emission;
+        var emissionUR = stateMachine.UpParticlesR.emission;
+        
+        emissionFL.rateOverTime = Math.Abs(horizontalInput) * stateMachine.ParticleAmount;
+        emissionFR.rateOverTime = Math.Abs(horizontalInput) * stateMachine.ParticleAmount;
+        emissionUL.rateOverTime = Math.Abs(verticalInput) * stateMachine.ParticleAmount;
+        emissionUR.rateOverTime = Math.Abs(verticalInput) * stateMachine.ParticleAmount;
     }
 
     public override void PhysicsTick(float fixedDeltaTime)

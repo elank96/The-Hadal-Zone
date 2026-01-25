@@ -29,6 +29,36 @@ public class PlayerTaserState : PlayerDefaultState
     
     private void HandleUseToolEvent()
     {
-        throw new NotImplementedException("HandleSwitchToolEvent");
+        Ray ray = stateMachine.MainCamera.ScreenPointToRay(stateMachine.InputReader.InputPosition);
+        
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            if (hit.collider.TryGetComponent<Scannable>(out Scannable target))
+            {
+                if (target.hasBeenScanned && !target.GetData().isEndangered)
+                {
+                    ExecuteShock(target.transform.position);
+                }
+                else
+                {
+                    Debug.Log("Shock Failed!");
+                }
+
+            }
+        }
+    }
+    
+    private void ExecuteShock(Vector3 origin)
+    {
+        float shockRadius = 3f; 
+        Collider[] hitColliders = Physics.OverlapSphere(origin, shockRadius);
+
+        foreach (var hit in hitColliders)
+        {
+            if (hit.TryGetComponent<Stunnable>(out var target))
+            {
+                target.Stun();
+            }
+        }
     }
 }

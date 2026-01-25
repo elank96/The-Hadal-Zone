@@ -41,11 +41,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.IOSResolver.dll" />
-    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.VersionHandlerImpl.dll" />
-    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.JarResolver.dll" />
-    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\Google.VersionHandler.dll" />
-    <Analyzer Include="C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.PackageManagerResolver.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />

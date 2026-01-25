@@ -3,24 +3,35 @@ using UnityEngine;
 
 public class WorldSpaceUIAnchor : MonoBehaviour
 {
-    public GameObject uiPrefab; // Drag your Canvas Prefab here
-    private GameObject spawnedUI;
+    public GameObject uiScannablePrefab;
+    public GameObject uiScanPrefab;
+    private GameObject spawnedScanUI;
+    private GameObject spawnedScannableUI;
 
-    [SerializeField] private float canvasOffset = 1.5f;
+    [SerializeField] private float canvasOffset = 1f;
     [SerializeField] private float canvasSize = .001f;
     
     private bool isDisplayed = false;
 
-    public void CreateUI(ScannableData data)
+    public void CreateScannableUI()
+    {
+        spawnedScannableUI = Instantiate(uiScannablePrefab, transform.position, Quaternion.identity);
+        spawnedScannableUI.transform.SetParent(this.transform);
+        spawnedScannableUI.transform.localPosition = new Vector3(0, 0, -.5f); // Offset above object
+        spawnedScannableUI.transform.localScale = new Vector3(.001f, .001f, .001f);
+        
+        Invoke(nameof(DestroyScannableUI), .99f);
+    }
+    public void CreateScanUI(ScannableData data)
     {
         if (!isDisplayed)
         {
-            spawnedUI = Instantiate(uiPrefab, transform.position, Quaternion.identity);
-            spawnedUI.transform.SetParent(this.transform);
-            spawnedUI.transform.localPosition = new Vector3(0, canvasOffset, 0); // Offset above object
-            spawnedUI.transform.localScale = new Vector3(canvasSize, canvasSize, canvasSize);
+            spawnedScanUI = Instantiate(uiScanPrefab, transform.position, Quaternion.identity);
+            spawnedScanUI.transform.SetParent(this.transform);
+            spawnedScanUI.transform.localPosition = new Vector3(0, canvasOffset, -canvasOffset); // Offset above object
+            spawnedScanUI.transform.localScale = new Vector3(canvasSize, canvasSize, canvasSize);
 
-            var bridge = spawnedUI.GetComponent<ScannableUIBridge>();
+            var bridge = spawnedScanUI.GetComponent<ScannableUIBridge>();
 
             if (bridge != null)
             {
@@ -31,13 +42,18 @@ public class WorldSpaceUIAnchor : MonoBehaviour
 
             isDisplayed = true;
 
-            Invoke(nameof(DestroyUI), 5f);
+            Invoke(nameof(DestroyScanUI), 5f);
         }
     }
 
-    public void DestroyUI()
+    public void DestroyScannableUI()
     {
         isDisplayed = false;
-        Destroy(spawnedUI);
+        Destroy(spawnedScannableUI);
+    }
+    public void DestroyScanUI()
+    {
+        isDisplayed = false;
+        Destroy(spawnedScanUI);
     }
 }

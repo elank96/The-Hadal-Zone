@@ -11,6 +11,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public float AttackRange { get; private set; } = 2f;
     [field: SerializeField] public float AttackCooldown { get; private set; } = 1f;
     [field: SerializeField] public float StunDuration { get; private set; } = 2f;
+    [field: SerializeField] public ParticleSystem StunParticles { get; private set; }
     [SerializeField] private LayerMask obstacleMask;
 
     [Header("Events")]

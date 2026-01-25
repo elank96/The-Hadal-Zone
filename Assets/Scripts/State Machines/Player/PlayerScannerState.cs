@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PlayerScannerState : PlayerDefaultState
 {
+    
+    float scanCooldown = 0f;
+    
     public PlayerScannerState(PlayerStateMachine stateMachine)
         : base(stateMachine) { }
     
@@ -14,6 +17,26 @@ public class PlayerScannerState : PlayerDefaultState
         base.Enter();
         stateMachine.InputReader.UseToolEvent += HandleUseToolEvent;
         Cursor.SetCursor(stateMachine.ScannerCursor, stateMachine.CursorHotspot, CursorMode.Auto);
+    }
+
+    public override void Tick(float deltaTime)
+    {
+        base.Tick(deltaTime);
+        scanCooldown -= deltaTime;
+        if (scanCooldown < 0f)
+        {
+            scanCooldown = 1f;
+            float scanRadius = 15f;
+            Collider[] hitColliders = Physics.OverlapSphere(stateMachine.transform.position, scanRadius);
+
+            foreach (var hit in hitColliders)
+            {
+                if (hit.TryGetComponent<Scannable>(out var target))
+                {
+                    target.DisplayScanUIElement();
+                }
+            }
+        }
     }
 
     public override void Exit()
@@ -37,23 +60,6 @@ public class PlayerScannerState : PlayerDefaultState
             if (hit.collider.TryGetComponent<Scannable>(out Scannable target))
             {
                 target.DisplayData();
-                
-                /*
-            if (hit.collider.TryGetComponent<Scannable>(out Scannable target))
-            {
-                // 1. Create the UI element under the Canvas
-                GameObject popupObj = UnityEngine.Object.Instantiate(
-                    stateMachine.ScanPopupPrefab,
-                    stateMachine.CanvasTransform
-                );
-
-                // 2. Pass the data and the target transform
-                if (popupObj.TryGetComponent<ScanPopupUI>(out var popupUI))
-                {
-                    popupUI.Setup(target.ScanObject(), target.transform);
-                }
-            }
-            */
             }
         }
     }
