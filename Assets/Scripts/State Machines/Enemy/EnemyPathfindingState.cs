@@ -28,6 +28,7 @@ public class EnemyPathfindingState : EnemyBaseState
         {
             stateMachine.SwitchState(new EnemyAttackState(stateMachine));
         }
+        
     }
 
     public override void Exit()
@@ -40,6 +41,7 @@ public class EnemyPathfindingState : EnemyBaseState
 
     public override void PhysicsTick(float fixedDeltaTime)
     {
+        
     }
 
     

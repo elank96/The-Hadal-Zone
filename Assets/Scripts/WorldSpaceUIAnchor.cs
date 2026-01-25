@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -43,6 +44,14 @@ public class WorldSpaceUIAnchor : MonoBehaviour
             isDisplayed = true;
 
             Invoke(nameof(DestroyScanUI), 5f);
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (spawnedScannableUI)
+        {
+            spawnedScannableUI.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
