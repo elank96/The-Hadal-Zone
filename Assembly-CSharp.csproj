@@ -58,9 +58,9 @@
     <Compile Include="Assets\Scripts\State Machines\StateMachine.cs" />
     <Compile Include="Assets\Scripts\AlwaysLookUp.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerTasterState.cs" />
-    <Compile Include="Assets\Scripts\Scriptable Objects\ScannableData.cs" />
     <Compile Include="Assets\Scripts\ScannableUIBridge.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyPathfindingState.cs" />
+    <Compile Include="Assets\Scripts\ScannableData.cs" />
     <Compile Include="Assets\Scripts\State Machines\State.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerScannerState.cs" />
     <Compile Include="Assets\Scripts\InputReader.cs" />
