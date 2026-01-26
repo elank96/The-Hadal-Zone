@@ -28,6 +28,8 @@ public class EnemyAttackState : EnemyBaseState
         targetCollider = stateMachine.Target != null ? stateMachine.Target.GetComponent<Collider>() : null;
         selfCollider = stateMachine.GetComponent<Collider>();
 
+        Debug.Log("Enemy attack phase: Locking");
+
         if (stateMachine.AIPath != null)
         {
             stateMachine.AIPath.enabled = false;
@@ -58,6 +60,7 @@ public class EnemyAttackState : EnemyBaseState
                 {
                     phase = AttackPhase.Holding;
                     phaseTimer = stateMachine.AttackHoldDuration;
+                    //Debug.Log("Enemy attack phase: Holding");
                 }
                 break;
             case AttackPhase.Holding:
@@ -65,9 +68,11 @@ public class EnemyAttackState : EnemyBaseState
                 phaseTimer -= deltaTime;
                 if (phaseTimer <= 0f)
                 {
+                    stateMachine.PlayPreLungeFlash();
                     phase = AttackPhase.Lunging;
                     phaseTimer = stateMachine.AttackLungeDuration;
                     hasDealtDamage = false;
+                    Debug.Log("Enemy lunge started.");
                 }
                 break;
             case AttackPhase.Lunging:
@@ -77,6 +82,7 @@ public class EnemyAttackState : EnemyBaseState
                 {
                     phase = AttackPhase.Cooldown;
                     phaseTimer = stateMachine.AttackCooldown;
+                    Debug.Log("Enemy attack phase: Cooldown");
                 }
                 break;
             case AttackPhase.Cooldown:
@@ -85,6 +91,7 @@ public class EnemyAttackState : EnemyBaseState
                 {
                     phase = AttackPhase.Locking;
                     phaseTimer = stateMachine.AttackLockDuration;
+                    // Debug.Log("Enemy attack phase: Locking");
                 }
                 break;
         }
