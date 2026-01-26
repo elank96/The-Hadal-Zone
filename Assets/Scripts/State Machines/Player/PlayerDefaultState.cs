@@ -86,6 +86,8 @@ public class PlayerDefaultState : PlayerBaseState
             targetRotation, 
             stateMachine.RotateSpeed * fixedDeltaTime
         );
+
+        stateMachine.transform.position = new Vector3(stateMachine.transform.position.x, stateMachine.transform.position.y, 0);
     }
 
     public override void Exit()

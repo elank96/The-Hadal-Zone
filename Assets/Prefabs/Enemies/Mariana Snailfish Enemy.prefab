@@ -4993,6 +4993,7 @@ GameObject:
   - component: {fileID: 586052312495377364}
   - component: {fileID: 3429340694509335493}
   - component: {fileID: 3324878800330154588}
+  - component: {fileID: 1853300785811126908}
   m_Layer: 3
   m_Name: Mariana Snailfish Enemy
   m_TagString: Untagged
@@ -5070,8 +5071,14 @@ MonoBehaviour:
   <DestinationSetter>k__BackingField: {fileID: 14846550744776879}
   <AttackRange>k__BackingField: 2
   <AttackCooldown>k__BackingField: 1
+  <AttackLockDuration>k__BackingField: 0.2
+  <AttackHoldDuration>k__BackingField: 0.2
+  <AttackLungeDuration>k__BackingField: 0.2
+  <AttackLungeSpeed>k__BackingField: 50
+  <AttackDamage>k__BackingField: 10
   <StunDuration>k__BackingField: 2
   <StunParticles>k__BackingField: {fileID: 7141748871271261315}
+  <PreLungeFlash>k__BackingField: {fileID: 1853300785811126908}
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8
@@ -5229,3 +5236,19 @@ MonoBehaviour:
   uiScanPrefab: {fileID: 4452292753950395061, guid: 0f69e5451bd18bd458babaf95113e798, type: 3}
   canvasOffset: 1
   canvasSize: 0.003
+--- !u!114 &1853300785811126908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554411051275635473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4bf43fd48f7fd7489bd1e57f668eac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyFlash
+  targetRenderer: {fileID: 720898368050091621}
+  flashColor: {r: 0.9183235, g: 0, b: 1, a: 1}
+  flashDuration: 0.1
+  flashCount: 2

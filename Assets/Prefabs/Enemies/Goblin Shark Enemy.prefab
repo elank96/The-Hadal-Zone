@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 5381867228028949962}
   - component: {fileID: 2923725225954385832}
   - component: {fileID: 8249080227472855106}
+  - component: {fileID: 1111592827643966833}
   m_Layer: 3
   m_Name: Goblin Shark Enemy
   m_TagString: Untagged
@@ -233,10 +234,16 @@ MonoBehaviour:
   <Target>k__BackingField: {fileID: 0}
   <AIPath>k__BackingField: {fileID: 3667220422695560207}
   <DestinationSetter>k__BackingField: {fileID: 7590798223834882803}
-  <AttackRange>k__BackingField: 2
-  <AttackCooldown>k__BackingField: 1
+  <AttackRange>k__BackingField: 10
+  <AttackCooldown>k__BackingField: 5
+  <AttackLockDuration>k__BackingField: 0.2
+  <AttackHoldDuration>k__BackingField: 0.2
+  <AttackLungeDuration>k__BackingField: 0.2
+  <AttackLungeSpeed>k__BackingField: 50
+  <AttackDamage>k__BackingField: 10
   <StunDuration>k__BackingField: 2
   <StunParticles>k__BackingField: {fileID: 2663010876431017954}
+  <PreLungeFlash>k__BackingField: {fileID: 1111592827643966833}
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8
@@ -394,6 +401,22 @@ MonoBehaviour:
   uiScanPrefab: {fileID: 4452292753950395061, guid: 0f69e5451bd18bd458babaf95113e798, type: 3}
   canvasOffset: 1
   canvasSize: 0.003
+--- !u!114 &1111592827643966833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5127073400042974267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4bf43fd48f7fd7489bd1e57f668eac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyFlash
+  targetRenderer: {fileID: 8573281277304970599}
+  flashColor: {r: 1, g: 0.34097308, b: 0, a: 1}
+  flashDuration: 0.1
+  flashCount: 2
 --- !u!1 &6616318255334787051
 GameObject:
   m_ObjectHideFlags: 0

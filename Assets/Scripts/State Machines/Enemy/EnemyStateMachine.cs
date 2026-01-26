@@ -77,7 +77,7 @@ public class EnemyStateMachine : StateMachine
             return false;
         }
 
-        damageable.ApplyDamage(damage);
+        damageable.DamagePlayer();
         return true;
     }
 

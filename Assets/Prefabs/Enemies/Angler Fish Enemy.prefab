@@ -4855,6 +4855,7 @@ GameObject:
   - component: {fileID: 5790462057585613192}
   - component: {fileID: 1027302562431956204}
   - component: {fileID: 6384911381344033104}
+  - component: {fileID: 3896824055537172519}
   m_Layer: 3
   m_Name: Angler Fish Enemy
   m_TagString: Untagged
@@ -4930,10 +4931,16 @@ MonoBehaviour:
   <Target>k__BackingField: {fileID: 0}
   <AIPath>k__BackingField: {fileID: 5079027914079064963}
   <DestinationSetter>k__BackingField: {fileID: 8636883369295102770}
-  <AttackRange>k__BackingField: 2
+  <AttackRange>k__BackingField: 3
   <AttackCooldown>k__BackingField: 1
+  <AttackLockDuration>k__BackingField: 0.2
+  <AttackHoldDuration>k__BackingField: 0.2
+  <AttackLungeDuration>k__BackingField: 0.2
+  <AttackLungeSpeed>k__BackingField: 50
+  <AttackDamage>k__BackingField: 10
   <StunDuration>k__BackingField: 2
   <StunParticles>k__BackingField: {fileID: 999712315994596607}
+  <PreLungeFlash>k__BackingField: {fileID: 3896824055537172519}
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8
@@ -5091,6 +5098,22 @@ MonoBehaviour:
   uiScanPrefab: {fileID: 4452292753950395061, guid: 0f69e5451bd18bd458babaf95113e798, type: 3}
   canvasOffset: 1
   canvasSize: 0.003
+--- !u!114 &3896824055537172519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096127529764230720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4bf43fd48f7fd7489bd1e57f668eac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyFlash
+  targetRenderer: {fileID: 287922564361069623}
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.1
+  flashCount: 2
 --- !u!1001 &1043279436547275576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5163,6 +5186,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5655713974033201794}
   m_SourcePrefab: {fileID: 100100000, guid: 95ce94f3923d18d4bbfc2fca556ee543, type: 3}
+--- !u!23 &287922564361069623 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 974062939928600335, guid: 95ce94f3923d18d4bbfc2fca556ee543, type: 3}
+  m_PrefabInstance: {fileID: 1043279436547275576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4372924697245038016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3663052439869460216, guid: 95ce94f3923d18d4bbfc2fca556ee543, type: 3}

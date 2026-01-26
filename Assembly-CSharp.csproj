@@ -51,11 +51,13 @@
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerStateMachine.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyStunState.cs" />
     <Compile Include="Assets\Scripts\Scannable.cs" />
+    <Compile Include="Assets\Scripts\ScreenFlash.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerBaseState.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyStateMachine.cs" />
     <Compile Include="Assets\Scripts\Stunnable.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyAttackState.cs" />
     <Compile Include="Assets\Scripts\State Machines\StateMachine.cs" />
+    <Compile Include="Assets\Scripts\EnemyFlash.cs" />
     <Compile Include="Assets\Scripts\AlwaysLookUp.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerTasterState.cs" />
     <Compile Include="Assets\Scripts\ScannableUIBridge.cs" />

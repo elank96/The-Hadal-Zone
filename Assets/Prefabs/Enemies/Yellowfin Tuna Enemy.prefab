@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8479323755081351288}
   - component: {fileID: 861550307012218211}
   - component: {fileID: 1462110163937088387}
+  - component: {fileID: 7454300149214701024}
   m_Layer: 3
   m_Name: Yellowfin Tuna Enemy
   m_TagString: Untagged
@@ -94,10 +95,16 @@ MonoBehaviour:
   <Target>k__BackingField: {fileID: 0}
   <AIPath>k__BackingField: {fileID: 6255473067357682306}
   <DestinationSetter>k__BackingField: {fileID: 6149071601888295014}
-  <AttackRange>k__BackingField: 2
+  <AttackRange>k__BackingField: 5
   <AttackCooldown>k__BackingField: 1
+  <AttackLockDuration>k__BackingField: 0.2
+  <AttackHoldDuration>k__BackingField: 0.2
+  <AttackLungeDuration>k__BackingField: 0.2
+  <AttackLungeSpeed>k__BackingField: 50
+  <AttackDamage>k__BackingField: 10
   <StunDuration>k__BackingField: 2
   <StunParticles>k__BackingField: {fileID: 7018114217169547063}
+  <PreLungeFlash>k__BackingField: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8
@@ -255,6 +262,22 @@ MonoBehaviour:
   uiScanPrefab: {fileID: 4452292753950395061, guid: 0f69e5451bd18bd458babaf95113e798, type: 3}
   canvasOffset: 1
   canvasSize: 0.003
+--- !u!114 &7454300149214701024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081540237197943793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4bf43fd48f7fd7489bd1e57f668eac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyFlash
+  targetRenderer: {fileID: 6506841776693928738}
+  flashColor: {r: 1, g: 0.8795767, b: 0, a: 1}
+  flashDuration: 0.1
+  flashCount: 2
 --- !u!1 &2456531464814213102
 GameObject:
   m_ObjectHideFlags: 0
@@ -5183,6 +5206,11 @@ MonoBehaviour:
   smoothTime: 10
   defaultRotation: {x: 0, y: -180, z: 90}
   flippedRotation: {x: 0, y: 0, z: 90}
+--- !u!23 &6506841776693928738 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1219401475289210693, guid: dece0a86d42cd0f4da4e6532d29a5559, type: 3}
+  m_PrefabInstance: {fileID: 5377541159091453031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8327403663040785947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4120860400896250492, guid: dece0a86d42cd0f4da4e6532d29a5559, type: 3}

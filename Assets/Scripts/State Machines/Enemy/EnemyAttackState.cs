@@ -43,7 +43,7 @@ public class EnemyAttackState : EnemyBaseState
             return;
         }
 
-        if (phase != AttackPhase.Lunging &&
+        if (phase == AttackPhase.Cooldown &&
             (!stateMachine.HasLineOfSight() || stateMachine.DistanceToTarget2D() > stateMachine.AttackRange))
         {
             stateMachine.SwitchState(new EnemyPathfindingState(stateMachine));

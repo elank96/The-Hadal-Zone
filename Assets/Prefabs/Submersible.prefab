@@ -5313,6 +5313,7 @@ GameObject:
   - component: {fileID: 5606371430352118992}
   - component: {fileID: 7960798330582274691}
   - component: {fileID: 7865338244805860838}
+  - component: {fileID: 6789527705256432287}
   m_Layer: 0
   m_Name: Submersible
   m_TagString: Untagged
@@ -5372,6 +5373,14 @@ MonoBehaviour:
   <ForwardPropR>k__BackingField: {fileID: 7361269493182921840}
   <UpPropL>k__BackingField: {fileID: 1657369039117659093}
   <UpPropR>k__BackingField: {fileID: 4674212170122040761}
+  <Health>k__BackingField: 3
+  <DamageOverlay>k__BackingField: {fileID: 0}
+  <DamageTextures>k__BackingField:
+  - {fileID: 2800000, guid: 07d0beb677473584fbcd743200b85a2a, type: 3}
+  - {fileID: 2800000, guid: 2786d55b3b7e818408cdc3b7d26cda3d, type: 3}
+  - {fileID: 2800000, guid: 82f0c45af3cced4419a04022e7c614c0, type: 3}
+  <IsInvincible>k__BackingField: 0
+  <CooldownUIElement>k__BackingField: {fileID: 0}
 --- !u!114 &8603292728532720624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5455,6 +5464,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0546262, y: 0.37006444, z: 1}
   m_Center: {x: 0.31991065, y: 0.31496778, z: 0}
+--- !u!114 &6789527705256432287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4858016950100832353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be4b9447a8b1a54e94625d98ad3d2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  <PlayerStateMachine>k__BackingField: {fileID: 5440379465382967397}
 --- !u!1 &5249821723283691987
 GameObject:
   m_ObjectHideFlags: 0
