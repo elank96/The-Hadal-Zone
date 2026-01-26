@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6172017626600515439
 Transform:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   <AttackRange>k__BackingField: 5
   <AttackCooldown>k__BackingField: 0
   <AttackLockDuration>k__BackingField: 0.5
-  <AttackHoldDuration>k__BackingField: 0.5
+  <AttackHoldDuration>k__BackingField: 1
   <AttackLungeDuration>k__BackingField: 0.5
   <AttackLungeSpeed>k__BackingField: 30
   <AttackDamage>k__BackingField: 10
