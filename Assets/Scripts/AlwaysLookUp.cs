@@ -4,6 +4,9 @@ public class AlwaysLookUp : MonoBehaviour
 {
     [Header("Control Settings")]
     [SerializeField] private float smoothTime = 10f; // Hysteresis/Smoothing factor
+
+    [SerializeField] private Vector3 defaultRotation;
+    [SerializeField] private Vector3 flippedRotation;
     
     private float _currentYOffset = 0f;
 
@@ -20,7 +23,7 @@ public class AlwaysLookUp : MonoBehaviour
         if (parentZ > 180) parentZ -= 360;
 
         // 3. Logic: If leaning left (Z between -180 and 0), flip Y
-        float targetY = (parentZ < 0 && parentZ > -180) ? 180f : 0f;
+        float targetY = (parentZ < 0 && parentZ > -180) ? flippedRotation.y : defaultRotation.y;
 
         // 4. Smooth the transition
         // Similar to a first-order lag filter in a control system
@@ -29,6 +32,6 @@ public class AlwaysLookUp : MonoBehaviour
         // 5. Apply to child local rotation
         // We keep local Z and X at 0 so it stays flush with the parent's gimbal
         // but rotates 180 degrees around its own Y axis.
-        transform.localRotation = Quaternion.Euler(0, _currentYOffset, -90);
+        transform.localRotation = Quaternion.Euler(defaultRotation.x, _currentYOffset, defaultRotation.z);
     }
 }

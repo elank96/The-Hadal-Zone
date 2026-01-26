@@ -6,6 +6,7 @@ public class Damageable : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private UnityEvent onDamaged;
     [SerializeField] private UnityEvent onDeath;
+    [field: SerializeField] public PlayerStateMachine PlayerStateMachine { get; private set; }
 
     public float CurrentHealth { get; private set; }
 
@@ -23,10 +24,22 @@ public class Damageable : MonoBehaviour
 
         CurrentHealth = Mathf.Max(0f, CurrentHealth - amount);
         onDamaged?.Invoke();
+        if (PlayerStateMachine != null)
+        {
+            PlayerStateMachine.TakeDamage();
+        }
 
         if (CurrentHealth <= 0f)
         {
             onDeath?.Invoke();
+        }
+    }
+
+    public void DamagePlayer()
+    {
+        if (PlayerStateMachine != null)
+        {
+            PlayerStateMachine.TakeDamage();
         }
     }
 }

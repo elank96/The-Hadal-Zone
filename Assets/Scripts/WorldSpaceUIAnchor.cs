@@ -18,8 +18,8 @@ public class WorldSpaceUIAnchor : MonoBehaviour
     {
         spawnedScannableUI = Instantiate(uiScannablePrefab, transform.position, Quaternion.identity);
         spawnedScannableUI.transform.SetParent(this.transform);
-        spawnedScannableUI.transform.localPosition = new Vector3(0, 0, -.5f); // Offset above object
-        spawnedScannableUI.transform.localScale = new Vector3(.001f, .001f, .001f);
+        spawnedScannableUI.transform.localPosition = new Vector3(0, 0, -.5f);
+        spawnedScannableUI.transform.localScale = new Vector3(canvasSize, canvasSize, canvasSize);
         
         Invoke(nameof(DestroyScannableUI), .99f);
     }
@@ -29,7 +29,7 @@ public class WorldSpaceUIAnchor : MonoBehaviour
         {
             spawnedScanUI = Instantiate(uiScanPrefab, transform.position, Quaternion.identity);
             spawnedScanUI.transform.SetParent(this.transform);
-            spawnedScanUI.transform.localPosition = new Vector3(0, canvasOffset, -canvasOffset); // Offset above object
+            spawnedScanUI.transform.localPosition = new Vector3(0, 0, -canvasOffset); // Offset above object
             spawnedScanUI.transform.localScale = new Vector3(canvasSize, canvasSize, canvasSize);
 
             var bridge = spawnedScanUI.GetComponent<ScannableUIBridge>();
@@ -51,7 +51,12 @@ public class WorldSpaceUIAnchor : MonoBehaviour
     {
         if (spawnedScannableUI)
         {
-            spawnedScannableUI.transform.rotation = Quaternion.Euler(0, 0, 0);
+            spawnedScannableUI.transform.rotation = Quaternion.identity;
+        }
+        
+        if (spawnedScanUI)
+        {
+            spawnedScanUI.transform.rotation = Quaternion.identity;
         }
     }
 
