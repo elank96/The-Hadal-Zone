@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerTaserState : PlayerDefaultState
 {
+    private float TaseCooldown = 5f;
     public PlayerTaserState(PlayerStateMachine stateMachine)
         : base(stateMachine) { }
     
@@ -14,6 +15,12 @@ public class PlayerTaserState : PlayerDefaultState
         base.Enter();
         stateMachine.InputReader.UseToolEvent += HandleUseToolEvent;
         Cursor.SetCursor(stateMachine.TaserCursor, stateMachine.CursorHotspot, CursorMode.Auto);
+    }
+
+    public override void Tick(float deltaTime)
+    {
+        base.Tick(deltaTime);
+        TaseCooldown -= deltaTime;
     }
 
     public override void Exit()
@@ -29,6 +36,10 @@ public class PlayerTaserState : PlayerDefaultState
     
     private void HandleUseToolEvent()
     {
+        if (TaseCooldown > 0f)
+        {
+            return;
+        }
         Ray ray = stateMachine.MainCamera.ScreenPointToRay(stateMachine.InputReader.InputPosition);
         
         if (Physics.Raycast(ray, out RaycastHit hit))
@@ -38,6 +49,7 @@ public class PlayerTaserState : PlayerDefaultState
                 if (target.hasBeenScanned && !target.GetData().isEndangered)
                 {
                     ExecuteShock(target.transform.position);
+                    TaseCooldown = 5f;
                 }
                 else
                 {

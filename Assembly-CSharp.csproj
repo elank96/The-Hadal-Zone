@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\ScannableUIBridge.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyPathfindingState.cs" />
     <Compile Include="Assets\Scripts\ScannableData.cs" />
+    <Compile Include="Assets\Scripts\Damageable.cs" />
     <Compile Include="Assets\Scripts\State Machines\State.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerScannerState.cs" />
     <Compile Include="Assets\Scripts\InputReader.cs" />

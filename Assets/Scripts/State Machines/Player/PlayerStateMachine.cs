@@ -28,19 +28,24 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public int Health { get; private set; } = 3;
     [field: SerializeField] public Image DamageOverlay { get; private set; } // The "Display" component
     [field: SerializeField] public Texture2D[] DamageTextures { get; private set; } // Put DMG1, 2, 3 here in order
+    [field: SerializeField] public bool IsInvincible {get; private set;}
     public Camera MainCamera { get; private set; }
     private void Start()
     {
         MainCamera = Camera.main;
         SwitchState(new PlayerDefaultState(this));
-        Invoke("TakeDamage",1f);
-        Invoke("TakeDamage",2f);
-        Invoke("TakeDamage",3f);
     }
 
     public void TakeDamage()
     {
+        if (IsInvincible)
+        {
+            return;
+        }
+        
         --Health;
+        IsInvincible = true;
+        Invoke(nameof(AllowDamage),1f);
         
         if (DamageOverlay == null || DamageTextures == null) return;
         
@@ -58,5 +63,10 @@ public class PlayerStateMachine : StateMachine
             DamageOverlay.enabled = true;
         }
         
+    }
+
+    private void AllowDamage()
+    {
+        IsInvincible = false;
     }
 }

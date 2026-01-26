@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8791366897292818214}
   - component: {fileID: 287214487505289656}
   - component: {fileID: 8573281277304970599}
-  - component: {fileID: 2062513777683635361}
   m_Layer: 0
   m_Name: Goblin Shark
   m_TagString: Untagged
@@ -92,32 +91,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2062513777683635361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4789096610091399628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c9eb21138f80040ae6e55fa2152ac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyStateMachine
-  <Rigidbody>k__BackingField: {fileID: 0}
-  <Target>k__BackingField: {fileID: 0}
-  <AIPath>k__BackingField: {fileID: 0}
-  <DestinationSetter>k__BackingField: {fileID: 0}
-  <AttackRange>k__BackingField: 2
-  <AttackCooldown>k__BackingField: 1
-  <StunDuration>k__BackingField: 2
-  <StunParticles>k__BackingField: {fileID: 0}
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 0
-  onAttack:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4988655383326848761
 GameObject:
   m_ObjectHideFlags: 0
