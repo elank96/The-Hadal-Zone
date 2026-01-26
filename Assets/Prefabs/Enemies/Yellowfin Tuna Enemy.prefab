@@ -95,10 +95,10 @@ MonoBehaviour:
   <Target>k__BackingField: {fileID: 0}
   <AIPath>k__BackingField: {fileID: 6255473067357682306}
   <DestinationSetter>k__BackingField: {fileID: 6149071601888295014}
-  <AttackRange>k__BackingField: 5
+  <AttackRange>k__BackingField: 7
   <AttackCooldown>k__BackingField: 0
   <AttackLockDuration>k__BackingField: 0.5
-  <AttackHoldDuration>k__BackingField: 1
+  <AttackHoldDuration>k__BackingField: 0.5
   <AttackLungeDuration>k__BackingField: 0.5
   <AttackLungeSpeed>k__BackingField: 30
   <AttackDamage>k__BackingField: 10
@@ -141,7 +141,7 @@ MonoBehaviour:
   radius: 0.46
   height: 0.55
   canMove: 1
-  maxSpeed: 8
+  maxSpeed: 12
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2

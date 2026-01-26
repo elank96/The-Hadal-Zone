@@ -5000,7 +5000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7625961313901276641
 Transform:
   m_ObjectHideFlags: 0
@@ -5069,10 +5069,10 @@ MonoBehaviour:
   <Target>k__BackingField: {fileID: 0}
   <AIPath>k__BackingField: {fileID: 6535328358918650363}
   <DestinationSetter>k__BackingField: {fileID: 14846550744776879}
-  <AttackRange>k__BackingField: 7
+  <AttackRange>k__BackingField: 10
   <AttackCooldown>k__BackingField: 2
   <AttackLockDuration>k__BackingField: 0.2
-  <AttackHoldDuration>k__BackingField: 0.5
+  <AttackHoldDuration>k__BackingField: 0.2
   <AttackLungeDuration>k__BackingField: 0.1
   <AttackLungeSpeed>k__BackingField: 100
   <AttackDamage>k__BackingField: 10

@@ -165,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7591844875590867301
 Transform:
   m_ObjectHideFlags: 0
@@ -234,12 +234,12 @@ MonoBehaviour:
   <Target>k__BackingField: {fileID: 0}
   <AIPath>k__BackingField: {fileID: 3667220422695560207}
   <DestinationSetter>k__BackingField: {fileID: 7590798223834882803}
-  <AttackRange>k__BackingField: 10
-  <AttackCooldown>k__BackingField: 5
-  <AttackLockDuration>k__BackingField: 0.2
-  <AttackHoldDuration>k__BackingField: 0.2
-  <AttackLungeDuration>k__BackingField: 0.2
-  <AttackLungeSpeed>k__BackingField: 50
+  <AttackRange>k__BackingField: 15
+  <AttackCooldown>k__BackingField: 2
+  <AttackLockDuration>k__BackingField: 0.7
+  <AttackHoldDuration>k__BackingField: 0.1
+  <AttackLungeDuration>k__BackingField: 0.15
+  <AttackLungeSpeed>k__BackingField: 75
   <AttackDamage>k__BackingField: 10
   <StunDuration>k__BackingField: 2
   <StunParticles>k__BackingField: {fileID: 2663010876431017954}
@@ -280,7 +280,7 @@ MonoBehaviour:
   radius: 1
   height: 0.55
   canMove: 1
-  maxSpeed: 4
+  maxSpeed: 5
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2

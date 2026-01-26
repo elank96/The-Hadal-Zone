@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement; // Essential for scene control
 public class SceneTransitionTrigger : MonoBehaviour
 {
     [Header("Configuration")]
-    [SerializeField] private string sceneToLoad;
+    [SerializeField] public string sceneToLoad;
     [SerializeField] private LayerMask playerLayer;
 
     // Optional: Add a delay like a debounce timer in hardware
@@ -20,7 +20,7 @@ public class SceneTransitionTrigger : MonoBehaviour
         }
     }
 
-    private void LoadTargetScene()
+    public void LoadTargetScene()
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
         {

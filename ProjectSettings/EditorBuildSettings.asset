@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start Menu.unity
+    guid: 471b82be1176cab4db140115d6bb06b6
+  - enabled: 1
+    path: Assets/Scenes/Controls Menu.unity
+    guid: 4106d1f5be3bec74ca2a01ec10047b1b
+  - enabled: 1
     path: Assets/Scenes/Levels/Daniel1.unity
     guid: 8368c7fb2fd5343499a4c0b610bbb727
   - enabled: 1
@@ -23,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Benthopelagic.unity
     guid: dd80470886f401e48adaa530087cd8b6
+  - enabled: 1
+    path: Assets/Scenes/End Menu.unity
+    guid: 39d4b5fb880f4ab44a0878c3af929ab1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

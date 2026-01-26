@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Damageable.cs" />
     <Compile Include="Assets\Scripts\State Machines\State.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerScannerState.cs" />
+    <Compile Include="Assets\Scripts\AlwaysVisibleFlare.cs" />
     <Compile Include="Assets\Scripts\InputReader.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerDefaultState.cs" />
     <Compile Include="Assets\Scripts\WorldSpaceUIAnchor.cs" />
@@ -529,11 +530,11 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.collections@aea9d3bd5e19\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.analytics@c9d14a6bdec6\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.analytics@c9d14a6bdec6\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

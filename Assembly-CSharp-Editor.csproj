@@ -525,14 +525,14 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.collections@aea9d3bd5e19\Unity.Collections.Tests\System.Runtime.CompilerServices.Unsafe\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Library\PackageCache\com.unity.analytics@c9d14a6bdec6\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver">
       <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\UnityStuff\MobileDependencyResolver\Editor\1.2.185\Google.PackageManagerResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>C:\Users\Daniel\Documents\GitHub\The-Hadal-Zone\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.3.4f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>

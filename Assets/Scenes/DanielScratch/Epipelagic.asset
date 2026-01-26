@@ -93,13 +93,13 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 0.7753141, y: 0.79887867, z: 1, w: 0}
+    m_Value: {x: 0.7753141, y: 0.79887867, z: 1, w: 0.026007805}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.039011706}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 0.7677616, y: 0.8334654, z: 1, w: 0}
+    m_Value: {x: 0.7677616, y: 0.8334654, z: 1, w: 0.9492847}
 --- !u!114 &-642466694531399870
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Surface Volume Profile
+  m_Name: Epipelagic
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.VolumeProfile
   components:
   - {fileID: 1318661077192639653}

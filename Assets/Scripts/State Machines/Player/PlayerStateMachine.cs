@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStateMachine : StateMachine
 {
@@ -42,6 +43,11 @@ public class PlayerStateMachine : StateMachine
         if (IsInvincible)
         {
             return;
+        }
+
+        if (Health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
         --Health;
