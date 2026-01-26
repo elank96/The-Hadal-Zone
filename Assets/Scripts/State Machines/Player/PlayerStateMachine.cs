@@ -29,6 +29,7 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Image DamageOverlay { get; private set; } // The "Display" component
     [field: SerializeField] public Texture2D[] DamageTextures { get; private set; } // Put DMG1, 2, 3 here in order
     [field: SerializeField] public bool IsInvincible {get; private set;}
+    [field: SerializeField] public Image CooldownUIElement {get; private set;}
     public Camera MainCamera { get; private set; }
     private void Start()
     {
