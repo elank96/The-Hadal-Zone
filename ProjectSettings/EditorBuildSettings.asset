@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Daniel1.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Levels/Daniel1.unity
+    guid: 8368c7fb2fd5343499a4c0b610bbb727
+  - enabled: 1
+    path: Assets/Scenes/Levels/Daniel2.unity
+    guid: 1d21ce471c9efb94fab35837873f943f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Daniel3.unity
+    guid: f4cdd326aa93c494f97cb881a9945600
+  - enabled: 1
+    path: Assets/Scenes/Levels/Mesopelagic.unity
+    guid: db99fefa39501bc49905253b711e2df8
+  - enabled: 1
+    path: Assets/Scenes/Levels/Bathypelagic.unity
+    guid: 36de41ffde27d27458626ad0c3b81912
+  - enabled: 1
+    path: Assets/Scenes/Levels/Benthopelagic.unity
+    guid: dd80470886f401e48adaa530087cd8b6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
