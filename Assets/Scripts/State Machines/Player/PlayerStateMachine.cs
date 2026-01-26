@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStateMachine : StateMachine
 {
@@ -23,10 +24,39 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public Transform ForwardPropR { get; private set; }
     [field: SerializeField] public Transform UpPropL { get; private set; }
     [field: SerializeField] public Transform UpPropR { get; private set; }
+    [field: Header("Health & Visuals")]
+    [field: SerializeField] public int Health { get; private set; } = 3;
+    [field: SerializeField] public Image DamageOverlay { get; private set; } // The "Display" component
+    [field: SerializeField] public Texture2D[] DamageTextures { get; private set; } // Put DMG1, 2, 3 here in order
     public Camera MainCamera { get; private set; }
     private void Start()
     {
         MainCamera = Camera.main;
         SwitchState(new PlayerDefaultState(this));
+        Invoke("TakeDamage",1f);
+        Invoke("TakeDamage",2f);
+        Invoke("TakeDamage",3f);
+    }
+
+    public void TakeDamage()
+    {
+        --Health;
+        
+        if (DamageOverlay == null || DamageTextures == null) return;
+        
+        DamageOverlay.gameObject.SetActive(true);
+        
+        int textureIndex = DamageTextures.Length - Health - 1;
+
+        if (textureIndex >= 0 && textureIndex < DamageTextures.Length)
+        {
+            // Convert Texture2D to Sprite for the UI Image component
+            Texture2D tex = DamageTextures[textureIndex];
+            DamageOverlay.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+            
+            // Ensure the overlay is visible
+            DamageOverlay.enabled = true;
+        }
+        
     }
 }
