@@ -17,7 +17,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public float AttackDamage { get; private set; } = 10f;
     [field: SerializeField] public float StunDuration { get; private set; } = 2f;
     [field: SerializeField] public ParticleSystem StunParticles { get; private set; }
-    [field: SerializeField] public ScreenFlash PreLungeFlash { get; private set; }
+    [field: SerializeField] public EnemyFlash PreLungeFlash { get; private set; }
     [SerializeField] private LayerMask obstacleMask;
 
     [Header("Events")]
