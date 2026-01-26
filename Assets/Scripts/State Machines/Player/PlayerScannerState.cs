@@ -55,7 +55,7 @@ public class PlayerScannerState : PlayerDefaultState
         Vector2 mousePos = stateMachine.InputReader.InputPosition;
         Ray ray = stateMachine.MainCamera.ScreenPointToRay(mousePos);
         
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("Obstacles")))
         {
             if (hit.collider.TryGetComponent<Scannable>(out Scannable target))
             {

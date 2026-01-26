@@ -18,7 +18,7 @@ public class WorldSpaceUIAnchor : MonoBehaviour
     {
         spawnedScannableUI = Instantiate(uiScannablePrefab, transform.position, Quaternion.identity);
         spawnedScannableUI.transform.SetParent(this.transform);
-        spawnedScannableUI.transform.localPosition = new Vector3(0, 0, -.5f);
+        spawnedScannableUI.transform.localPosition = new Vector3(0, 0, .1f);
         spawnedScannableUI.transform.localScale = new Vector3(canvasSize, canvasSize, canvasSize);
         
         Invoke(nameof(DestroyScannableUI), .99f);

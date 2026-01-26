@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\EnemyFlash.cs" />
     <Compile Include="Assets\Scripts\AlwaysLookUp.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerTasterState.cs" />
+    <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\ScannableUIBridge.cs" />
     <Compile Include="Assets\Scripts\State Machines\Enemy\EnemyPathfindingState.cs" />
     <Compile Include="Assets\Scripts\ScannableData.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets\Scripts\InputReader.cs" />
     <Compile Include="Assets\Scripts\State Machines\Player\PlayerDefaultState.cs" />
     <Compile Include="Assets\Scripts\WorldSpaceUIAnchor.cs" />
+    <Compile Include="Assets\Scripts\Activator.cs" />
     <Compile Include="Assets\Scripts\PlayerArrowMover.cs" />
     <Compile Include="Assets\Controls.cs" />
     <None Include="Assets\UnityStuff\Resources\BillingMode.json" />
